@@ -1,30 +1,30 @@
 function TwitchStatsScreen_OnLoad()
     
-    TwitchEmoteSentStatKeys = {}
+    TwitchEmotesvKEKLSentStatKeys = {}
     local n = 0;
     local totalEmotesSent = 0;
-    for k,v in pairs(TwitchEmoteStatistics) do
-        if TwitchEmotes_defaultpack[k] ~= nil and v[2] > 0 then -- Only add if the emote still exsists
+    for k,v in pairs(TwitchEmotesvKEKLStatistics) do
+        if TwitchEmotesvKEKL_defaultpack[k] ~= nil and v[2] > 0 then -- Only add if the emote still exsists
             n=n+1;
             totalEmotesSent = totalEmotesSent + v[2];
-            TwitchEmoteSentStatKeys[n]=k;
+            TwitchEmotesvKEKLSentStatKeys[n]=k;
         end
     end
     
     TwitchStatsScreenSentListTitle:SetText("Sent " .. totalEmotesSent .. " emotes")
     
     --Sort the sent stats list by usage
-    table.sort(TwitchEmoteSentStatKeys, function(left, right)
-        return TwitchEmoteStatistics[left][2] > TwitchEmoteStatistics[right][2]
+    table.sort(TwitchEmotesvKEKLSentStatKeys, function(left, right)
+        return TwitchEmotesvKEKLStatistics[left][2] > TwitchEmotesvKEKLStatistics[right][2]
     end);
 
-    FilteredTwitchEmoteSentStatKeys = TwitchEmoteSentStatKeys;
+    FilteredTwitchEmotesvKEKLSentStatKeys = TwitchEmotesvKEKLSentStatKeys;
 
     TwitchEmoteRecievedStatKeys = {}
     local n = 0;
     local totalEmotesSeen = 0;
-    for k,v in pairs(TwitchEmoteStatistics) do
-        if TwitchEmotes_defaultpack[k] ~= nil and v[3] > 0 then -- Only add if the emote still exsists
+    for k,v in pairs(TwitchEmotesvKEKLStatistics) do
+        if TwitchEmotesvKEKL_defaultpack[k] ~= nil and v[3] > 0 then -- Only add if the emote still exsists
             n=n+1;
             totalEmotesSeen = totalEmotesSeen + v[3];
             TwitchEmoteRecievedStatKeys[n]=k;
@@ -34,10 +34,10 @@ function TwitchStatsScreen_OnLoad()
 
     --Sort the seen stats list by nr of times seen
     table.sort(TwitchEmoteRecievedStatKeys, function(left, right)
-        return TwitchEmoteStatistics[left][3] > TwitchEmoteStatistics[right][3]
+        return TwitchEmotesvKEKLStatistics[left][3] > TwitchEmotesvKEKLStatistics[right][3]
     end);
 
-    FilteredTwitchEmoteRecievedStatKeys = TwitchEmoteSentStatKeys;
+    FilteredTwitchEmoteRecievedStatKeys = TwitchEmotesvKEKLSentStatKeys;
 
     TwitchStatsScreen:SetBackdrop({
         bgFile = 'Interface\\DialogFrame\\UI-DialogBox-Background-Dark',
@@ -67,14 +67,14 @@ function TwitchStatsScreen_OnLoad()
     topEmoteBorder:SetPoint('CENTER', TwitchStatsScreen, "TOPLEFT", 128, -108)
     topEmoteBorder:Show();
 
-    local topSentImagePath = TwitchEmotes_defaultpack[TwitchEmoteSentStatKeys[1]] or "Interface\\AddOns\\TwitchEmotes\\Emotes\\1337.tga";
-    local animdata = TwitchEmotes_animation_metadata[topSentImagePath]
+    local topSentImagePath = TwitchEmotesvKEKL_defaultpack[TwitchEmotesvKEKLSentStatKeys[1]] or "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\1337.tga";
+    local animdata = TwitchEmotesvKEKL_animation_metadata[topSentImagePath]
     TwitchStatsScreen.topSentEmoteTexture = TwitchStatsScreen.topSentEmoteTexture or TwitchStatsScreen:CreateTexture(nil, "BACKGROUND", nil, 2);
     local topEmoteTexture = TwitchStatsScreen.topSentEmoteTexture
 
     if animdata ~= nil then
         topEmoteTexture:SetTexture(topSentImagePath);
-        topEmoteTexture:SetTexCoord(TwitchEmotes_GetTexCoordsForFrame(animdata, 0)) 
+        topEmoteTexture:SetTexCoord(TwitchEmotesvKEKL_GetTexCoordsForFrame(animdata, 0)) 
     else
         local size = string.match(topSentImagePath, ":(.*)")
         if size then
@@ -89,14 +89,14 @@ function TwitchStatsScreen_OnLoad()
     topEmoteTexture:SetPoint('CENTER', TwitchStatsScreen, "TOPLEFT", 128, -108)
     topEmoteTexture:Show();
 
-    if #TwitchEmoteSentStatKeys >= 1 and TwitchEmoteStatistics[TwitchEmoteSentStatKeys[1]][2] > 0 then
-        TwitchStatsScreenTopSentText:SetText(TwitchEmoteSentStatKeys[1] .. " sent " .. TwitchEmoteStatistics[TwitchEmoteSentStatKeys[1]][2] .. "x")
+    if #TwitchEmotesvKEKLSentStatKeys >= 1 and TwitchEmotesvKEKLStatistics[TwitchEmotesvKEKLSentStatKeys[1]][2] > 0 then
+        TwitchStatsScreenTopSentText:SetText(TwitchEmotesvKEKLSentStatKeys[1] .. " sent " .. TwitchEmotesvKEKLStatistics[TwitchEmotesvKEKLSentStatKeys[1]][2] .. "x")
     else
         TwitchStatsScreenTopSentText:SetText("No emotes sent yet");
     end
 
-    if #TwitchEmoteRecievedStatKeys >= 1 and TwitchEmoteStatistics[TwitchEmoteRecievedStatKeys[1]][3] > 0 then
-        TwitchStatsScreenTopRecievedText:SetText(TwitchEmoteRecievedStatKeys[1] .. " seen " .. TwitchEmoteStatistics[TwitchEmoteRecievedStatKeys[1]][3] .. "x")
+    if #TwitchEmoteRecievedStatKeys >= 1 and TwitchEmotesvKEKLStatistics[TwitchEmoteRecievedStatKeys[1]][3] > 0 then
+        TwitchStatsScreenTopRecievedText:SetText(TwitchEmoteRecievedStatKeys[1] .. " seen " .. TwitchEmotesvKEKLStatistics[TwitchEmoteRecievedStatKeys[1]][3] .. "x")
     else
         TwitchStatsScreenTopRecievedText:SetText("No emotes seen yet");
     end
@@ -109,15 +109,15 @@ function TwitchStatsScreen_OnLoad()
     topEmoteBorder:SetPoint('CENTER', TwitchStatsScreen, "TOPLEFT", 384, -108)
     topEmoteBorder:Show();
 
-    local topSeenImagePath = TwitchEmotes_defaultpack[TwitchEmoteRecievedStatKeys[1]] or "Interface\\AddOns\\TwitchEmotes\\Emotes\\1337.tga";
-    local animdata = TwitchEmotes_animation_metadata[topSeenImagePath]
+    local topSeenImagePath = TwitchEmotesvKEKL_defaultpack[TwitchEmoteRecievedStatKeys[1]] or "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\1337.tga";
+    local animdata = TwitchEmotesvKEKL_animation_metadata[topSeenImagePath]
 
     TwitchStatsScreen.topSeenEmoteTexture = TwitchStatsScreen.topSeenEmoteTexture or TwitchStatsScreen:CreateTexture(nil, "BACKGROUND", nil, 2);
     topEmoteTexture = TwitchStatsScreen.topSeenEmoteTexture;
 
     if animdata ~= nil then
         topEmoteTexture:SetTexture(topSeenImagePath);
-        topEmoteTexture:SetTexCoord(TwitchEmotes_GetTexCoordsForFrame(animdata, 0)) 
+        topEmoteTexture:SetTexCoord(TwitchEmotesvKEKL_GetTexCoordsForFrame(animdata, 0)) 
     else
         local size = string.match(topSeenImagePath, ":(.*)")
         if size then
@@ -144,7 +144,7 @@ function TwitchStatsScreen_OnLoad()
         local text = searchBox:GetText();
         if(text == '') then
             FilteredTwitchEmoteRecievedStatKeys = TwitchEmoteRecievedStatKeys
-            FilteredTwitchEmoteSentStatKeys = TwitchEmoteSentStatKeys
+            FilteredTwitchEmotesvKEKLSentStatKeys = TwitchEmotesvKEKLSentStatKeys
         else
             local receivedResultsCount = 1;
             FilteredTwitchEmoteRecievedStatKeys = {}
@@ -159,13 +159,13 @@ function TwitchStatsScreen_OnLoad()
 
             --todo: refactor this copied code
             local sentResultsCount = 1;
-            FilteredTwitchEmoteSentStatKeys = {}
-            for i=1, #TwitchEmoteSentStatKeys  do
+            FilteredTwitchEmotesvKEKLSentStatKeys = {}
+            for i=1, #TwitchEmotesvKEKLSentStatKeys  do
                 local pattern = text:lower();
                 pattern = "^.*" .. text:lower() .. ".*";
 
-                if string.find(TwitchEmoteSentStatKeys[i]:lower(), pattern) == 1 then
-                    FilteredTwitchEmoteSentStatKeys[sentResultsCount] = TwitchEmoteSentStatKeys[i];
+                if string.find(TwitchEmotesvKEKLSentStatKeys[i]:lower(), pattern) == 1 then
+                    FilteredTwitchEmotesvKEKLSentStatKeys[sentResultsCount] = TwitchEmotesvKEKLSentStatKeys[i];
                     sentResultsCount = sentResultsCount + 1
                 end
             end
@@ -193,24 +193,24 @@ end
 function TwitchStatsSentScrollBar_Update()
     local nrOfItemsVisible = 17
     local lineplusoffset; -- an index into our data calculated from the scroll offset
-    local filteredStatKeys = FilteredTwitchEmoteSentStatKeys
+    local filteredStatKeys = FilteredTwitchEmotesvKEKLSentStatKeys
     
     FauxScrollFrame_Update(TwitchStatsSentScrollBar,#filteredStatKeys,nrOfItemsVisible,16);
     for line=1, nrOfItemsVisible do
       lineplusoffset = line + FauxScrollFrame_GetOffset(TwitchStatsSentScrollBar);
       if lineplusoffset <= #filteredStatKeys then
         local cEmote = filteredStatKeys[lineplusoffset];
-        local fullEmotePath = TwitchEmotes_defaultpack[cEmote];
-        local animdata = TwitchEmotes_animation_metadata[fullEmotePath]
+        local fullEmotePath = TwitchEmotesvKEKL_defaultpack[cEmote];
+        local animdata = TwitchEmotesvKEKL_animation_metadata[fullEmotePath]
         local texturestr = nil
         if animdata ~= nil then
-            texturestr = TwitchEmotes_BuildEmoteFrameStringWithDimensions(fullEmotePath, animdata, 0, 16, 16)
+            texturestr = TwitchEmotesvKEKL_BuildEmoteFrameStringWithDimensions(fullEmotePath, animdata, 0, 16, 16)
         else
             local size = string.match(fullEmotePath, ":(.*)")
             texturestr = "|T"..string.gsub(fullEmotePath, size, "16:16").."|t"
         end
 
-        getglobal("TwitchStatsSentEntry"..line):SetText("|cFFfce703" .. lineplusoffset ..".|r ".. texturestr .." " .. " |cFF00FF00"..cEmote.."|r sent: " .. TwitchEmoteStatistics[cEmote][2] .. "x");
+        getglobal("TwitchStatsSentEntry"..line):SetText("|cFFfce703" .. lineplusoffset ..".|r ".. texturestr .." " .. " |cFF00FF00"..cEmote.."|r sent: " .. TwitchEmotesvKEKLStatistics[cEmote][2] .. "x");
         getglobal("TwitchStatsSentEntry"..line):Show();
         
       else
@@ -230,18 +230,18 @@ function TwitchStatsRecievedScrollBar_Update()
       lineplusoffset = line + FauxScrollFrame_GetOffset(TwitchStatsRecievedScrollBar);
       if lineplusoffset <= #filteredStatKeys then
         local cEmote = filteredStatKeys[lineplusoffset];
-        local fullEmotePath = TwitchEmotes_defaultpack[cEmote]
+        local fullEmotePath = TwitchEmotesvKEKL_defaultpack[cEmote]
 
-        local animdata = TwitchEmotes_animation_metadata[fullEmotePath]
+        local animdata = TwitchEmotesvKEKL_animation_metadata[fullEmotePath]
         local texturestr = nil
         if animdata ~= nil then
-            texturestr = TwitchEmotes_BuildEmoteFrameStringWithDimensions(fullEmotePath, animdata, 0, 16, 16)
+            texturestr = TwitchEmotesvKEKL_BuildEmoteFrameStringWithDimensions(fullEmotePath, animdata, 0, 16, 16)
         else
             local size = string.match(fullEmotePath, ":(.*)")
             texturestr = "|T"..string.gsub(fullEmotePath, size, "16:16").."|t"
         end
         
-        getglobal("TwitchStatsRecievedEntry"..line):SetText("|cFFfce703" .. lineplusoffset ..".|r ".. texturestr .." " .. " |cFF00FF00"..cEmote.."|r seen: " .. TwitchEmoteStatistics[cEmote][3] .. "x");
+        getglobal("TwitchStatsRecievedEntry"..line):SetText("|cFFfce703" .. lineplusoffset ..".|r ".. texturestr .." " .. " |cFF00FF00"..cEmote.."|r seen: " .. TwitchEmotesvKEKLStatistics[cEmote][3] .. "x");
         getglobal("TwitchStatsRecievedEntry"..line):Show();
         
       else

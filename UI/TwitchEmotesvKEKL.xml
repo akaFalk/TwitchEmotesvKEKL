@@ -99,7 +99,7 @@ Revert PowaBarSliderTemplate to inherit from OptionsSliderTemplate if it's fixed
     </Layers>
     <Scripts>
       <OnLoad>
-        self.name = "TwitchEmotes";
+        self.name = "TwitchEmotesvKEKL";
         InterfaceOptions_AddCategory(self);
         
         self:RegisterEvent("ADDON_LOADED");

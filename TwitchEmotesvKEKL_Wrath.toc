@@ -1,0 +1,16 @@
+## Interface: 30400
+## Title: |TInterface\Addons\TwitchEmotesvKEKL\Emotes\GuildEmotes\KEKL:0|tTwitch Emotes vKEKL|TInterface\Addons\TwitchEmotes\Emotes\GuildEmotes\KEKL:0|t
+## Author: Falk
+## Notes: Adds popular Twitch & Discord emotes to your chat. Forked from TwitchEmotes
+## Version: vKEKL
+## SavedVariables: Emoticons_Settings, TwitchEmotesvKEKLStatistics
+## OptionalDeps: LibStub, LibUIDropDownMenu
+
+Libs\load_libs.xml
+Emotes.lua
+DropdownItems.lua
+TwitchEmotesvKEKLAnimator.lua
+TwitchEmotesvKEKL.lua
+TwitchEmotesvKEKLStatistics.lua
+UI\TwitchEmotesvKEKL.xml
+UI\TwitchEmotesvKEKLStats.xml

@@ -1,0 +1,16 @@
+## Interface: 90207
+## Title: |TInterface\Addons\TwitchEmotesvKEKL\Emotes\Pepes\EZ:0|tTwitch Emotes|TInterface\Addons\TwitchEmotes\Emotes\Pepes\EZ:0|t
+## Author: Ren - Illidan (US) & Jons - MirageRaceway (EU)
+## Notes: Adds popular Twitch & Discord emotes to your chat. Developed by Ren - Illidan (US) & Jons - Golemagg (EU)
+## Version: v2
+## SavedVariables: Emoticons_Settings, TwitchEmotesvKEKLStatistics
+## OptionalDeps: LibStub, LibUIDropDownMenu
+
+Libs\load_libs.xml
+Emotes.lua
+DropdownItems.lua
+TwitchEmotesvKEKLAnimator.lua
+TwitchEmotesvKEKL.lua
+TwitchEmotesvKEKLStatistics.lua
+UI\TwitchEmotesvKEKL.xml
+UI\TwitchEmotesvKEKLStats.xml

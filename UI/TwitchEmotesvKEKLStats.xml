@@ -25,7 +25,7 @@
 
     <Layers>
       <Layer level="ARTWORK">
-        <FontString name="$parentTitle" text="TwitchEmotes usage data" inherits="GameFontNormal" justifyh="LEFT" justifyv="TOP">
+        <FontString name="$parentTitle" text="TwitchEmotesvKEKL usage data" inherits="GameFontNormal" justifyh="LEFT" justifyv="TOP">
           <Anchors>
             <Anchor point="TOPLEFT">
               <Offset>

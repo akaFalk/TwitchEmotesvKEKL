@@ -69,7 +69,7 @@ local origsettings = {
 };
 
 -- Put your code that you want on a minimap button click here.  arg1="LeftButton", "RightButton", etc
-function TwitchEmotes_MinimapButton_OnClick(btn)
+function TwitchEmotesvKEKL_MinimapButton_OnClick(btn)
     if IsShiftKeyDown() then
         TwitchStatsScreen_OnLoad();
     else
@@ -105,7 +105,7 @@ function Emoticons_LoadMiniMapDropdown(self, level, menuList)
     info.notCheckable = true;
     info.notClickable = false;
     if (level or 1) == 1 then
-        for k, v in ipairs(TwitchEmotes_dropdown_options) do
+        for k, v in ipairs(TwitchEmotesvKEKL_dropdown_options) do
             if (Emoticons_Settings["FAVEMOTES"][k]) then
                 info.hasArrow = true;
                 info.text = v[1];
@@ -117,15 +117,15 @@ function Emoticons_LoadMiniMapDropdown(self, level, menuList)
         end
     else
         first = true;
-        for ke, va in ipairs(TwitchEmotes_dropdown_options[menuList]) do
+        for ke, va in ipairs(TwitchEmotesvKEKL_dropdown_options[menuList]) do
             if (first) then
                 first = false;
             else
-                -- if(TwitchEmotes_defaultpack[va] == nil) then
+                -- if(TwitchEmotesvKEKL_defaultpack[va] == nil) then
                 --     print(ke.." " .. va .. " is broken");
                 -- end
                 
-                info.text = "|T" .. TwitchEmotes_defaultpack[va] .. "|t " .. va;
+                info.text = "|T" .. TwitchEmotesvKEKL_defaultpack[va] .. "|t " .. va;
                 info.value = va;
                 info.func = Emoticons_Dropdown_OnClick;
                 LibDD:UIDropDownMenu_AddButton(info, level);
@@ -145,7 +145,7 @@ local sm = SendMail;
 function SendMail(recipient, subject, msg, ...)
     if msg ~= nil then
         if Emoticons_Settings["ENABLE_CLICKABLEEMOTES"] then
-            msg = TwitchEmotes_Message_StripEscapes(msg) 
+            msg = TwitchEmotesvKEKL_Message_StripEscapes(msg) 
         end
         sm(recipient, subject, msg, ...);
     end
@@ -155,7 +155,7 @@ local scm = SendChatMessage;
 function SendChatMessage(msg, ...)
     if msg ~= nil then
         if Emoticons_Settings["ENABLE_CLICKABLEEMOTES"] then
-            msg = TwitchEmotes_Message_StripEscapes(msg) 
+            msg = TwitchEmotesvKEKL_Message_StripEscapes(msg) 
         end
         scm(msg, ...);
     end
@@ -165,7 +165,7 @@ local bnsw = BNSendWhisper;
 function BNSendWhisper(id, msg, ...)
     if msg ~= nil then
         if Emoticons_Settings["ENABLE_CLICKABLEEMOTES"] then
-            msg = TwitchEmotes_Message_StripEscapes(msg) 
+            msg = TwitchEmotesvKEKL_Message_StripEscapes(msg) 
         end
         bnsw(id, msg, ...);
     end
@@ -188,7 +188,7 @@ local function escpattern(x)
 
 -- Strip the twitch emote link and texture escapes from the message before sending.
 -- (to allow for sending shift-clicked emotes, we are not allowed to send messages with a '|T' sequence in it)
-function TwitchEmotes_Message_StripEscapes(msg)
+function TwitchEmotesvKEKL_Message_StripEscapes(msg)
 
 	--find a twitch emote link in the message
 	for str in string.gmatch(msg, "(|Htel:.-|h.-|h)") do
@@ -227,11 +227,11 @@ end
 local accept_stat_updates = false;
 local iconregistered = false
 local autocompleteInited = false
-local Broker_TwitchEmotes
+local Broker_TwitchEmotesvKEKL
 local origEnter, origLeave = {}, {}
 local _G = getfenv(0)
 function Emoticons_OnEvent(self, event, ...)
-    if (event == "ADDON_LOADED" and select(1, ...) == "TwitchEmotes") then
+    if (event == "ADDON_LOADED" and select(1, ...) == "TwitchEmotesvKEKL") then
         for k, v in pairs(origsettings) do
             if (Emoticons_Settings[k] == nil) then
                 Emoticons_Settings[k] = v;
@@ -241,65 +241,65 @@ function Emoticons_OnEvent(self, event, ...)
         -- Tauren Dairy Co
         if GetRealmName() == "Golemagg" then
             -- Emote directory
-            TwitchEmotes_defaultpack["arthaslul"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\arthaslul.tga:28:28"
-            TwitchEmotes_defaultpack["banspray"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\banspray.tga:28:28"
-            TwitchEmotes_defaultpack[":bruh:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\bruh.tga:28:28"
-            TwitchEmotes_defaultpack["dots"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\dots.tga:28:28"
-            TwitchEmotes_defaultpack["FeralPog"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\FeralPog.tga:28:28"
-            TwitchEmotes_defaultpack["Gachicrul"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\Gachicrul.tga:28:28"
-            TwitchEmotes_defaultpack["hugevenomsac"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\hugevenomsac.tga:28:28"
-            TwitchEmotes_defaultpack["hugevipus"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\hugevipus.tga:28:28"
-            TwitchEmotes_defaultpack["Jooper"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\Jooper.tga:28:28"
-            TwitchEmotes_defaultpack["khadscusemewhat"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\khadscusemewhat.tga:28:28"
-            TwitchEmotes_defaultpack["khadthink"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\khadthink.tga:28:28"
-            TwitchEmotes_defaultpack["konks"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\konks.tga:28:28"
-            TwitchEmotes_defaultpack["largecock"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\largecock.tga:28:28"
-            TwitchEmotes_defaultpack["monkaScandy"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\monkaScandy.tga:28:28"
-            TwitchEmotes_defaultpack["moppcum"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\moppcum.tga:28:28"
-            TwitchEmotes_defaultpack["Moppers"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\Moppers.tga:28:28"
-            TwitchEmotes_defaultpack["pepeshoots"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\pepeshoots.tga:28:28"
-            TwitchEmotes_defaultpack["purge"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\purge.tga:28:28"
-            TwitchEmotes_defaultpack["Stahp"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\Stahp.tga:28:28"
-            TwitchEmotes_defaultpack["suckssac"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\suckssac.tga:28:28"
-            TwitchEmotes_defaultpack[":sac:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\venomsac.tga:28:28"
-            TwitchEmotes_defaultpack["Vipus"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\Vipus.tga:28:28"
-            TwitchEmotes_defaultpack["workwork"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\workwork.tga:28:28"
-            TwitchEmotes_defaultpack["YKD"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\YKD.tga:28:28"
-            TwitchEmotes_defaultpack["Grimaldus"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\Grimaldus.tga:28:28"
-            TwitchEmotes_defaultpack["SadBuns"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\SadBuns.tga:28:28"
-            TwitchEmotes_defaultpack["peepoMphjens"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\peepoMphjens.tga"
-            TwitchEmotes_animation_metadata["Interface\\AddOns\\TwitchEmotes\\Emotes\\TaurenDairyCo\\peepoMphjens.tga"] = {["nFrames"] = 4, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=128, ["framerate"] = 10}
+            TwitchEmotesvKEKL_defaultpack["arthaslul"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\arthaslul.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["banspray"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\banspray.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack[":bruh:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\bruh.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["dots"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\dots.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["FeralPog"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\FeralPog.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["Gachicrul"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\Gachicrul.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["hugevenomsac"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\hugevenomsac.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["hugevipus"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\hugevipus.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["Jooper"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\Jooper.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["khadscusemewhat"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\khadscusemewhat.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["khadthink"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\khadthink.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["konks"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\konks.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["largecock"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\largecock.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["monkaScandy"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\monkaScandy.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["moppcum"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\moppcum.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["Moppers"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\Moppers.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["pepeshoots"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\pepeshoots.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["purge"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\purge.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["Stahp"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\Stahp.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["suckssac"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\suckssac.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack[":sac:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\venomsac.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["Vipus"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\Vipus.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["workwork"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\workwork.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["YKD"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\YKD.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["Grimaldus"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\Grimaldus.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["SadBuns"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\SadBuns.tga:28:28"
+            TwitchEmotesvKEKL_defaultpack["peepoMphjens"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\peepoMphjens.tga"
+            TwitchEmotesvKEKL_animation_metadata["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\TaurenDairyCo\\peepoMphjens.tga"] = {["nFrames"] = 4, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=128, ["framerate"] = 10}
             -- Emote name references
-            TwitchEmotes_emoticons["arthaslul"] = "arthaslul"
-            TwitchEmotes_emoticons["banspray"] = "banspray"
-            TwitchEmotes_emoticons[":bruh:"] = ":bruh:"
-            TwitchEmotes_emoticons["dots"] = "dots"
-            TwitchEmotes_emoticons["FeralPog"] = "FeralPog"
-            TwitchEmotes_emoticons["Gachicrul"] = "Gachicrul"
-            TwitchEmotes_emoticons["hugevenomsac"] = "hugevenomsac"
-            TwitchEmotes_emoticons["hugevipus"] = "hugevipus"
-            TwitchEmotes_emoticons["Jooper"] = "Jooper"
-            TwitchEmotes_emoticons["khadscusemewhat"] = "khadscusemewhat"
-            TwitchEmotes_emoticons["khadthink"] = "khadthink"
-            TwitchEmotes_emoticons["konks"] = "konks"
-            TwitchEmotes_emoticons["largecock"] = "largecock"
-            TwitchEmotes_emoticons["monkaScandy"] = "monkaScandy"
-            TwitchEmotes_emoticons["moppcum"] = "moppcum"
-            TwitchEmotes_emoticons["Moppers"] = "Moppers"
-            TwitchEmotes_emoticons["pepeshoots"] = "pepeshoots"
-            TwitchEmotes_emoticons["purge"] = "purge"
-            TwitchEmotes_emoticons["Stahp"] = "Stahp"
-            TwitchEmotes_emoticons["suckssac"] = "suckssac"
-            TwitchEmotes_emoticons["venomsac"] = "venomsac"
-            TwitchEmotes_emoticons[":sac:"] = ":sac:"
-            TwitchEmotes_emoticons["Vipus"] = "Vipus"
-            TwitchEmotes_emoticons["workwork"] = "workwork"
-            TwitchEmotes_emoticons["YKD"] = "YKD"
-            TwitchEmotes_emoticons["Grimaldus"] = "Grimaldus"
-            TwitchEmotes_emoticons["SadBuns"] = "SadBuns"
-            TwitchEmotes_emoticons["peepoMphjens"] = "peepoMphjens"
+            TwitchEmotesvKEKL_emoticons["arthaslul"] = "arthaslul"
+            TwitchEmotesvKEKL_emoticons["banspray"] = "banspray"
+            TwitchEmotesvKEKL_emoticons[":bruh:"] = ":bruh:"
+            TwitchEmotesvKEKL_emoticons["dots"] = "dots"
+            TwitchEmotesvKEKL_emoticons["FeralPog"] = "FeralPog"
+            TwitchEmotesvKEKL_emoticons["Gachicrul"] = "Gachicrul"
+            TwitchEmotesvKEKL_emoticons["hugevenomsac"] = "hugevenomsac"
+            TwitchEmotesvKEKL_emoticons["hugevipus"] = "hugevipus"
+            TwitchEmotesvKEKL_emoticons["Jooper"] = "Jooper"
+            TwitchEmotesvKEKL_emoticons["khadscusemewhat"] = "khadscusemewhat"
+            TwitchEmotesvKEKL_emoticons["khadthink"] = "khadthink"
+            TwitchEmotesvKEKL_emoticons["konks"] = "konks"
+            TwitchEmotesvKEKL_emoticons["largecock"] = "largecock"
+            TwitchEmotesvKEKL_emoticons["monkaScandy"] = "monkaScandy"
+            TwitchEmotesvKEKL_emoticons["moppcum"] = "moppcum"
+            TwitchEmotesvKEKL_emoticons["Moppers"] = "Moppers"
+            TwitchEmotesvKEKL_emoticons["pepeshoots"] = "pepeshoots"
+            TwitchEmotesvKEKL_emoticons["purge"] = "purge"
+            TwitchEmotesvKEKL_emoticons["Stahp"] = "Stahp"
+            TwitchEmotesvKEKL_emoticons["suckssac"] = "suckssac"
+            TwitchEmotesvKEKL_emoticons["venomsac"] = "venomsac"
+            TwitchEmotesvKEKL_emoticons[":sac:"] = ":sac:"
+            TwitchEmotesvKEKL_emoticons["Vipus"] = "Vipus"
+            TwitchEmotesvKEKL_emoticons["workwork"] = "workwork"
+            TwitchEmotesvKEKL_emoticons["YKD"] = "YKD"
+            TwitchEmotesvKEKL_emoticons["Grimaldus"] = "Grimaldus"
+            TwitchEmotesvKEKL_emoticons["SadBuns"] = "SadBuns"
+            TwitchEmotesvKEKL_emoticons["peepoMphjens"] = "peepoMphjens"
             -- Dropdown menu
-            TwitchEmotes_dropdown_options[#TwitchEmotes_dropdown_options + 1] = { -- 25
+            TwitchEmotesvKEKL_dropdown_options[#TwitchEmotesvKEKL_dropdown_options + 1] = { -- 25
                 "Tauren Dairy Co", "arthaslul", "banspray", ":bruh:", "dots","FeralPog", 
                 "Gachicrul", "Grimaldus", "hugevenomsac", "hugevipus","Jooper","khadscusemewhat", 
                 "khadthink", "konks","largecock", "monkaScandy", "moppcum", "Moppers", 
@@ -313,7 +313,7 @@ function Emoticons_OnEvent(self, event, ...)
                 end
             end
             if IsPlayerInOGFeedback() == true then
-                TwitchEmotes_dropdown_options[#TwitchEmotes_dropdown_options + 1] = { -- 16
+                TwitchEmotesvKEKL_dropdown_options[#TwitchEmotesvKEKL_dropdown_options + 1] = { -- 16
                     'OG Feedback',
                     "BaileysDude", "BatriSam", "Cakers", "Chibol", "dudeman","SamWise", 
                     "FeelsPewMan", "GorillaPump", "PreachChamp", "Priotais","SamS","SamSafe", 
@@ -322,11 +322,11 @@ function Emoticons_OnEvent(self, event, ...)
             end
         end
 
-        TwitchEmotesAnimatorUpdateFrame = CreateFrame("Frame", "TwitchEmotesAnimator_EventFrame", UIParent)
+        TwitchEmotesvKEKLAnimatorUpdateFrame = CreateFrame("Frame", "TwitchEmotesvKEKLAnimator_EventFrame", UIParent)
         Emoticons_EnableAnimatedEmotes(Emoticons_Settings["ENABLE_ANIMATEDEMOTES"])
 
-        -- layout is TwitchEmoteStatistics[emote] = {nrTimesAutoCompleted, nrTimesSent, nrTimesSeen}
-        TwitchEmoteStatistics = TwitchEmoteStatistics or {}; -- saved in savedvariables. (might slow ui loading if the dict gets big?)
+        -- layout is TwitchEmotesvKEKLStatistics[emote] = {nrTimesAutoCompleted, nrTimesSent, nrTimesSeen}
+        TwitchEmotesvKEKLStatistics = TwitchEmotesvKEKLStatistics or {}; -- saved in savedvariables. (might slow ui loading if the dict gets big?)
         
         Emoticons_UpdateChatFilters();
         Emoticons_SetLargeEmotes(Emoticons_Settings["LARGEEMOTES"]);
@@ -340,15 +340,15 @@ function Emoticons_OnEvent(self, event, ...)
 			accept_stat_updates = true;
 		end)
         
-        Broker_TwitchEmotes = LDB:NewDataObject("TwitchEmotes", {
+        Broker_TwitchEmotesvKEKL = LDB:NewDataObject("TwitchEmotesvKEKL", {
             type = "launcher",
-            text = "TwitchEmotes",
-            icon = "Interface\\AddOns\\TwitchEmotes\\Emotes\\1337.tga",
-            OnClick = TwitchEmotes_MinimapButton_OnClick
+            text = "TwitchEmotesvKEKL",
+            icon = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\1337.tga",
+            OnClick = TwitchEmotesvKEKL_MinimapButton_OnClick
         })
         
         if(Emoticons_Settings["MINIMAPBUTTON"]) then
-            LDBIcon:Register("TwitchEmotes", Broker_TwitchEmotes, Emoticons_Settings["MINIMAPDATA"])
+            LDBIcon:Register("TwitchEmotesvKEKL", Broker_TwitchEmotesvKEKL, Emoticons_Settings["MINIMAPDATA"])
             iconregistered = true
         end
 
@@ -369,7 +369,7 @@ function Emoticons_OnEvent(self, event, ...)
 
         -- add WIM Support
     elseif (event == "ADDON_LOADED" and select(1, ...) == "WIM" and Emoticons_Settings["ENABLE_AUTOCOMPLETE"]) then
-        local module = WIM.CreateModule("TwitchEmotes", true);
+        local module = WIM.CreateModule("TwitchEmotesvKEKL", true);
         function module:OnWindowCreated(win)
             local editbox = win.widgets.msg_box
             editbox:SetScript("OnKeyDown", editbox:GetScript("OnKeyDown") or function () end)
@@ -388,8 +388,8 @@ function Emoticons_OnEvent(self, event, ...)
                 renderSuggestionFN = Emoticons_RenderSuggestionFN,
                 suggestionBiasFN = function(suggestion, text)
                     --Bias the sorting function towards the most autocompleted emotes
-                    if TwitchEmoteStatistics[suggestion] ~= nil then
-                        return TwitchEmoteStatistics[suggestion][1] * 5
+                    if TwitchEmotesvKEKLStatistics[suggestion] ~= nil then
+                        return TwitchEmotesvKEKLStatistics[suggestion][1] * 5
                     end
                     return 0;
                 end,
@@ -437,11 +437,11 @@ end
 
 --this function transforms the text in the autocomplete suggestions (we add the emote image here)
 function Emoticons_RenderSuggestionFN(text)
-    local fullEmotePath = TwitchEmotes_defaultpack[text]
+    local fullEmotePath = TwitchEmotesvKEKL_defaultpack[text]
     if(fullEmotePath ~= nil) then
-        local animdata = TwitchEmotes_animation_metadata[fullEmotePath]
+        local animdata = TwitchEmotesvKEKL_animation_metadata[fullEmotePath]
         if animdata ~= nil then
-            return TwitchEmotes_BuildEmoteFrameStringWithDimensions(fullEmotePath, animdata, 0, 16, 16) .. text;
+            return TwitchEmotesvKEKL_BuildEmoteFrameStringWithDimensions(fullEmotePath, animdata, 0, 16, 16) .. text;
         else
             local size = string.match(fullEmotePath, ":(.*)")
             local path_and_size = "";
@@ -458,7 +458,7 @@ end
 function setAllFav(value)
     for n, m in ipairs(Emoticons_Settings["FAVEMOTES"]) do
         Emoticons_Settings["FAVEMOTES"][n] = value;
-        getglobal("favCheckButton_" .. TwitchEmotes_dropdown_options[n][1]):SetChecked(value);
+        getglobal("favCheckButton_" .. TwitchEmotesvKEKL_dropdown_options[n][1]):SetChecked(value);
     end
 end
 
@@ -520,7 +520,7 @@ function Emoticons_OptionsWindow_OnShow(self)
 
     first = true;
     itemcnt = 0
-    for a, c in ipairs(TwitchEmotes_dropdown_options) do
+    for a, c in ipairs(TwitchEmotesvKEKL_dropdown_options) do
         if first then
             favCheckButton = CreateFrame("CheckButton",
                                          "favCheckButton_" .. c[1],
@@ -595,12 +595,12 @@ function Emoticons_SetMinimapButton(state)
     
     if (state) then
         if not iconregistered then
-            LDBIcon:Register("TwitchEmotes", Broker_TwitchEmotes, Emoticons_Settings["MINIMAPDATA"])
+            LDBIcon:Register("TwitchEmotesvKEKL", Broker_TwitchEmotesvKEKL, Emoticons_Settings["MINIMAPDATA"])
             iconregistered = true
         end
-        LDBIcon:Show("TwitchEmotes");
+        LDBIcon:Show("TwitchEmotesvKEKL");
     else
-        LDBIcon:Hide("TwitchEmotes");
+        LDBIcon:Hide("TwitchEmotesvKEKL");
     end
 end
 
@@ -628,9 +628,9 @@ end
 function Emoticons_EnableAnimatedEmotes(state)
     Emoticons_Settings["ENABLE_ANIMATEDEMOTES"] = state;
     if(state) then
-        TwitchEmotesAnimatorUpdateFrame:SetScript('OnUpdate', TwitchEmotesAnimator_OnUpdate);
+        TwitchEmotesvKEKLAnimatorUpdateFrame:SetScript('OnUpdate', TwitchEmotesvKEKLAnimator_OnUpdate);
     else
-        TwitchEmotesAnimatorUpdateFrame:SetScript('OnUpdate', nil);
+        TwitchEmotesvKEKLAnimatorUpdateFrame:SetScript('OnUpdate', nil);
     end
 end
 
@@ -642,13 +642,13 @@ function Emoticons_SetAutoComplete(state)
         AllTwitchEmoteNames = {};
 
         local i = 1;
-        for k, v in pairs(TwitchEmotes_defaultpack) do
-            --Some values in emoticons don't have a corresponding key in TwitchEmotes_defaultpack
+        for k, v in pairs(TwitchEmotesvKEKL_defaultpack) do
+            --Some values in emoticons don't have a corresponding key in TwitchEmotesvKEKL_defaultpack
             --we need to filter these out because we don't have an emote to show for these
-            -- if TwitchEmotes_defaultpack[v] ~= nil then
+            -- if TwitchEmotesvKEKL_defaultpack[v] ~= nil then
                 local excluded = false;
-                for j=1, #TwitchEmotes_ExcludedSuggestions do
-                    if k == TwitchEmotes_ExcludedSuggestions[j] then
+                for j=1, #TwitchEmotesvKEKL_ExcludedSuggestions do
+                    if k == TwitchEmotesvKEKL_ExcludedSuggestions[j] then
                         excluded = true;
                         break;
                     end
@@ -683,8 +683,8 @@ function Emoticons_SetAutoComplete(state)
                 renderSuggestionFN = Emoticons_RenderSuggestionFN,
                 suggestionBiasFN = function(suggestion, text)
                     --Bias the sorting function towards the most autocompleted emotes
-                    if TwitchEmoteStatistics[suggestion] ~= nil then
-                        return TwitchEmoteStatistics[suggestion][1] * 5
+                    if TwitchEmotesvKEKLStatistics[suggestion] ~= nil then
+                        return TwitchEmotesvKEKLStatistics[suggestion][1] * 5
                     end
                     return 0;
                 end,
@@ -706,16 +706,16 @@ end
 --pass false or nil to leave a value as is, otherwise it gets incremented by one {nrTimesAutoCompleted, nrTimesSent, nrTimesSeen}
 function UpdateEmoteStats(emote, nrTimesAutoCompleted, nrTimesSent, nrTimesSeen)
     
-    if TwitchEmoteStatistics[emote] == nil then
-        TwitchEmoteStatistics[emote] = {0, 0, 0};
+    if TwitchEmotesvKEKLStatistics[emote] == nil then
+        TwitchEmotesvKEKLStatistics[emote] = {0, 0, 0};
     end
 
-    local newautocompleted = (nrTimesAutoCompleted and TwitchEmoteStatistics[emote][1] + 1) or TwitchEmoteStatistics[emote][1];
-    local newnrTimesSent = (nrTimesSent and TwitchEmoteStatistics[emote][2] + 1) or TwitchEmoteStatistics[emote][2];
-    local newnrTimesSeen = (nrTimesSeen and TwitchEmoteStatistics[emote][3] + 1) or TwitchEmoteStatistics[emote][3];
+    local newautocompleted = (nrTimesAutoCompleted and TwitchEmotesvKEKLStatistics[emote][1] + 1) or TwitchEmotesvKEKLStatistics[emote][1];
+    local newnrTimesSent = (nrTimesSent and TwitchEmotesvKEKLStatistics[emote][2] + 1) or TwitchEmotesvKEKLStatistics[emote][2];
+    local newnrTimesSeen = (nrTimesSeen and TwitchEmotesvKEKLStatistics[emote][3] + 1) or TwitchEmotesvKEKLStatistics[emote][3];
     --print("registered emote stat, {nrTimesAutoCompleted, nrTimesSent, nrTimesSeen}: ", nrTimesAutoCompleted, nrTimesSent, nrTimesSeen)
     --print("new values: ", newautocompleted, newnrTimesSent, newnrTimesSeen)
-    TwitchEmoteStatistics[emote] = {newautocompleted, newnrTimesSent,  newnrTimesSeen}
+    TwitchEmotesvKEKLStatistics[emote] = {newautocompleted, newnrTimesSent,  newnrTimesSeen}
 end
 
 local lastmsgID = -1;
@@ -727,9 +727,9 @@ function Emoticons_InsertEmoticons(msg, senderGUID, msgID)
     local delimiters = "%s,'<>?-%.!"
 
     for word in string.gmatch(msg, "[^" .. delimiters .. "]+") do
-        local emote = TwitchEmotes_emoticons[word]
+        local emote = TwitchEmotesvKEKL_emoticons[word]
 
-        if TwitchEmotes_defaultpack[emote] ~= nil then
+        if TwitchEmotesvKEKL_defaultpack[emote] ~= nil then
             --print("Inserting ", emote, msgID,  UnitGUID("player"));
             if accept_stat_updates then
                 if msgID ~= lastmsgID then -- Only handle 
@@ -744,11 +744,11 @@ function Emoticons_InsertEmoticons(msg, senderGUID, msgID)
             
             -- print("Detected " .. emote)
             -- Get the size of the emote, if not a standard size
-            local path_and_size = TwitchEmotes_defaultpack[emote]
+            local path_and_size = TwitchEmotesvKEKL_defaultpack[emote]
             local path = string.match(path_and_size, "(.*%.tga)")
             local size = string.match(path_and_size, ":(.*)")
             -- Make a copy of the file path so we don't modify the original value
-            local animdata = TwitchEmotes_GetAnimData(path);
+            local animdata = TwitchEmotesvKEKL_GetAnimData(path);
             
             if(animdata == nil) then
                 -- Check if the user has large emotes enabled. 
@@ -756,19 +756,19 @@ function Emoticons_InsertEmoticons(msg, senderGUID, msgID)
                 -- else set it to the standard large size of 64:64
                 if not Emoticons_Settings["LARGEEMOTES"] then
                     if ( size == 'LARGE' or size == 'XLARGE' or size == 'XXLARGE' ) then
-                        path_and_size = string.gsub(TwitchEmotes_defaultpack[emote], size, normal)
+                        path_and_size = string.gsub(TwitchEmotesvKEKL_defaultpack[emote], size, normal)
                     end
                 else
                     if ( size == 'LARGE' ) then
-                        path_and_size = string.gsub(TwitchEmotes_defaultpack[emote], size, large)
+                        path_and_size = string.gsub(TwitchEmotesvKEKL_defaultpack[emote], size, large)
                     elseif ( size == 'XLARGE' ) then
-                        path_and_size = string.gsub(TwitchEmotes_defaultpack[emote], size, xlarge)
+                        path_and_size = string.gsub(TwitchEmotesvKEKL_defaultpack[emote], size, xlarge)
                     elseif ( size == 'XXLARGE') then
-                        path_and_size = string.gsub(TwitchEmotes_defaultpack[emote], size, xxlarge)
+                        path_and_size = string.gsub(TwitchEmotesvKEKL_defaultpack[emote], size, xxlarge)
                     end
                 end
             else 
-                path_and_size = TwitchEmotes_BuildEmoteFrameString(path, animdata, 0):gsub("|T", ""):gsub("|t", "");
+                path_and_size = TwitchEmotesvKEKL_BuildEmoteFrameString(path, animdata, 0):gsub("|T", ""):gsub("|t", "");
             end
             
 
@@ -844,19 +844,19 @@ b = CreateFrame("Button", "TestButton", ChatFrame1, "UIPanelButtonTemplate");
 
 function Emoticons_RegisterPack(name, newEmoticons, pack)
     for k, v in pairs(newEmoticons) do
-        TwitchEmotes_emoticons[k] = v
+        TwitchEmotesvKEKL_emoticons[k] = v
     end
 
     for k, v in pairs(pack) do
-        TwitchEmotes_defaultpack[k] = v
+        TwitchEmotesvKEKL_defaultpack[k] = v
     end
 end
 
 -- Dec's Synergy Twitch Emotes support
 
-TwitchEmotes = {};
+TwitchEmotesvKEKL = {};
 
-function TwitchEmotes:AddCategory(name, emotes)
+function TwitchEmotesvKEKL:AddCategory(name, emotes)
     -- Initialise the category data (starting with the name)
     local category = {name};
 
@@ -866,29 +866,29 @@ function TwitchEmotes:AddCategory(name, emotes)
     end
 
     -- Get the next index in our dropdown options
-    local nextCategoryIndex = (#TwitchEmotes_dropdown_options + 1);
+    local nextCategoryIndex = (#TwitchEmotesvKEKL_dropdown_options + 1);
 
     -- Add to the dropdown list
-    TwitchEmotes_dropdown_options[nextCategoryIndex] = category;
+    TwitchEmotesvKEKL_dropdown_options[nextCategoryIndex] = category;
 
     -- Ensure it shows up in the list in regards to the favourite filtering
     Emoticons_Settings["FAVEMOTES"][nextCategoryIndex] = true;
 end
 
-function TwitchEmotes:AddEmote(id, name, path)
+function TwitchEmotesvKEKL:AddEmote(id, name, path)
     -- Add to the emote store
-    TwitchEmotes_defaultpack[id] = path;
+    TwitchEmotesvKEKL_defaultpack[id] = path;
 
     -- Add to the message replacement list
-    TwitchEmotes_emoticons[name] = id;
+    TwitchEmotesvKEKL_emoticons[name] = id;
 end
 
-TwitchEmotes_HoverMessageInfo = nil;
+TwitchEmotesvKEKL_HoverMessageInfo = nil;
 function Emoticons_OnHyperlinkEnter(frame, link, message, fontstring, ...)
 	local linkType, linkContent = link:match("^([^:]+):(.+)")
 	if (linkType) then
 		if (linkType == "tel") then
-            TwitchEmotes_HoverMessageInfo = fontstring.messageInfo;
+            TwitchEmotesvKEKL_HoverMessageInfo = fontstring.messageInfo;
 
 			GameTooltip:SetOwner(frame, "ANCHOR_CURSOR");
 			GameTooltip:SetText(linkContent, 255, 210, 0);
@@ -901,7 +901,7 @@ end
 
 function Emoticons_OnHyperlinkLeave(frame, ...)
 	GameTooltip:Hide()
-    TwitchEmotes_HoverMessageInfo = nil
+    TwitchEmotesvKEKL_HoverMessageInfo = nil
 
 	if origLeave[frame] then return origLeave[frame](frame, ...) end
 end

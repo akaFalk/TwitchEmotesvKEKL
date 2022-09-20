@@ -1,5 +1,5 @@
 -- 45 per menu max
-TwitchEmotes_dropdown_options = {
+TwitchEmotesvKEKL_dropdown_options = {
     [01] = { -- 45
         "Asmongold", "asmon1", "asmon2", "asmon3", "asmon4", "asmonC",
         "asmonCD", "asmonD", "asmonDad", "asmonDaze", "asmonDegen", "asmonE",

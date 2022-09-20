@@ -1,14 +1,14 @@
-local TWITCHEMOTES_TimeSinceLastUpdate = 0
-local TWITCHEMOTES_T = 0;
+local TWITCHEMOTESVKEKL_TimeSinceLastUpdate = 0
+local TWITCHEMOTESVKEKL_T = 0;
 
-function TwitchEmotesAnimator_OnUpdate(self, elapsed)
+function TwitchEmotesvKEKLAnimator_OnUpdate(self, elapsed)
 
-    if (TWITCHEMOTES_TimeSinceLastUpdate >= 0.033) then
+    if (TWITCHEMOTESVKEKL_TimeSinceLastUpdate >= 0.033) then
         -- Update animated emotes in chat windows
         for i = 1, NUM_CHAT_WINDOWS do
             for _, visibleLine in ipairs(_G["ChatFrame" .. i].visibleLines) do
-                if(_G["ChatFrame" .. i]:IsShown() and visibleLine.messageInfo ~= TwitchEmotes_HoverMessageInfo) then 
-                    TwitchEmotesAnimator_UpdateEmoteInFontString(visibleLine, 28, 28);
+                if(_G["ChatFrame" .. i]:IsShown() and visibleLine.messageInfo ~= TwitchEmotesvKEKL_HoverMessageInfo) then 
+                    TwitchEmotesvKEKLAnimator_UpdateEmoteInFontString(visibleLine, 28, 28);
                 end
             end
         end
@@ -19,7 +19,7 @@ function TwitchEmotesAnimator_OnUpdate(self, elapsed)
             for i = 1, EditBoxAutoCompleteBox.existingButtonCount do
                 local cBtn = EditBoxAutoComplete_GetAutoCompleteButton(i);
                 if (cBtn:IsVisible()) then
-                    TwitchEmotesAnimator_UpdateEmoteInFontString(cBtn, 16, 16);
+                    TwitchEmotesvKEKLAnimator_UpdateEmoteInFontString(cBtn, 16, 16);
                 else
                     break
                 end
@@ -29,20 +29,20 @@ function TwitchEmotesAnimator_OnUpdate(self, elapsed)
         -- Update animated emotes in statistics screen
         if(TwitchStatsScreen:IsVisible()) then
            
-            local topSentImagePath = TwitchEmotes_defaultpack[TwitchEmoteSentStatKeys[1]] or "Interface\\AddOns\\TwitchEmotes\\Emotes\\1337.tga";
-            local animdata = TwitchEmotes_animation_metadata[topSentImagePath:match("(Interface\\AddOns\\TwitchEmotes\\Emotes.-.tga)")]
+            local topSentImagePath = TwitchEmotesvKEKL_defaultpack[TwitchEmotesvKEKLSentStatKeys[1]] or "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\1337.tga";
+            local animdata = TwitchEmotesvKEKL_animation_metadata[topSentImagePath:match("(Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes.-.tga)")]
             
             if(animdata ~= nil) then
-                local cFrame = TwitchEmotes_GetCurrentFrameNum(animdata)
-                TwitchStatsScreen.topSentEmoteTexture:SetTexCoord(TwitchEmotes_GetTexCoordsForFrame(animdata, cFrame)) 
+                local cFrame = TwitchEmotesvKEKL_GetCurrentFrameNum(animdata)
+                TwitchStatsScreen.topSentEmoteTexture:SetTexCoord(TwitchEmotesvKEKL_GetTexCoordsForFrame(animdata, cFrame)) 
             end
                 
 
-            local topSeenImagePath = TwitchEmotes_defaultpack[TwitchEmoteRecievedStatKeys[1]] or "Interface\\AddOns\\TwitchEmotes\\Emotes\\1337.tga";
-            local animdata = TwitchEmotes_animation_metadata[topSeenImagePath:match("(Interface\\AddOns\\TwitchEmotes\\Emotes.-.tga)")]
+            local topSeenImagePath = TwitchEmotesvKEKL_defaultpack[TwitchEmoteRecievedStatKeys[1]] or "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\1337.tga";
+            local animdata = TwitchEmotesvKEKL_animation_metadata[topSeenImagePath:match("(Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes.-.tga)")]
             if(animdata ~= nil) then
-                local cFrame = TwitchEmotes_GetCurrentFrameNum(animdata)
-                TwitchStatsScreen.topSeenEmoteTexture:SetTexCoord(TwitchEmotes_GetTexCoordsForFrame(animdata, cFrame)) 
+                local cFrame = TwitchEmotesvKEKL_GetCurrentFrameNum(animdata)
+                TwitchStatsScreen.topSeenEmoteTexture:SetTexCoord(TwitchEmotesvKEKL_GetTexCoordsForFrame(animdata, cFrame)) 
             end
             
 
@@ -51,21 +51,21 @@ function TwitchEmotesAnimator_OnUpdate(self, elapsed)
                 local recievedEntry = getglobal("TwitchStatsRecievedEntry"..line)
 
                 if(sentEntry:IsVisible()) then
-                    TwitchEmotesAnimator_UpdateEmoteInFontString(sentEntry, 16, 16);
+                    TwitchEmotesvKEKLAnimator_UpdateEmoteInFontString(sentEntry, 16, 16);
                 end
 
                 if(recievedEntry:IsVisible()) then
-                    TwitchEmotesAnimator_UpdateEmoteInFontString(recievedEntry, 16, 16);
+                    TwitchEmotesvKEKLAnimator_UpdateEmoteInFontString(recievedEntry, 16, 16);
                 end
             end
         end
         
 
-        TWITCHEMOTES_TimeSinceLastUpdate = 0;
+        TWITCHEMOTESVKEKL_TimeSinceLastUpdate = 0;
     end
 
-    TWITCHEMOTES_T = TWITCHEMOTES_T + elapsed
-    TWITCHEMOTES_TimeSinceLastUpdate = TWITCHEMOTES_TimeSinceLastUpdate +
+    TWITCHEMOTESVKEKL_T = TWITCHEMOTESVKEKL_T + elapsed
+    TWITCHEMOTESVKEKL_TimeSinceLastUpdate = TWITCHEMOTESVKEKL_TimeSinceLastUpdate +
                                         elapsed;
 end
 
@@ -88,23 +88,23 @@ end
 
 -- This will update the texture escapesequence of an animated emote
 -- if it exsists in the contents of the fontstring
-function TwitchEmotesAnimator_UpdateEmoteInFontString(fontstring, widthOverride, heightOverride)
+function TwitchEmotesvKEKLAnimator_UpdateEmoteInFontString(fontstring, widthOverride, heightOverride)
     local txt = fontstring:GetText();
     if (txt ~= nil) then
-        for emoteTextureString in txt:gmatch("(|TInterface\\AddOns\\TwitchEmotes\\Emotes.-|t)") do
-            local imagepath = emoteTextureString:match("|T(Interface\\AddOns\\TwitchEmotes\\Emotes.-.tga).-|t")
+        for emoteTextureString in txt:gmatch("(|TInterface\\AddOns\\TwitchEmotesvKEKL\\Emotes.-|t)") do
+            local imagepath = emoteTextureString:match("|T(Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes.-.tga).-|t")
 
-            local animdata = TwitchEmotes_animation_metadata[imagepath];
+            local animdata = TwitchEmotesvKEKL_animation_metadata[imagepath];
             if (animdata ~= nil) then
-                local framenum = TwitchEmotes_GetCurrentFrameNum(animdata);
+                local framenum = TwitchEmotesvKEKL_GetCurrentFrameNum(animdata);
                 local nTxt;
                 if(widthOverride ~= nil or heightOverride ~= nil) then
                     nTxt = txt:gsub(escpattern(emoteTextureString),
-                                        TwitchEmotes_BuildEmoteFrameStringWithDimensions(
+                                        TwitchEmotesvKEKL_BuildEmoteFrameStringWithDimensions(
                                         imagepath, animdata, framenum, widthOverride, heightOverride))
                 else
                     nTxt = txt:gsub(escpattern(emoteTextureString),
-                                      TwitchEmotes_BuildEmoteFrameString(
+                                      TwitchEmotesvKEKL_BuildEmoteFrameString(
                                         imagepath, animdata, framenum))
                 end
 
@@ -121,20 +121,20 @@ end
 
 
 
-function TwitchEmotes_GetAnimData(imagepath)
-    return TwitchEmotes_animation_metadata[imagepath]
+function TwitchEmotesvKEKL_GetAnimData(imagepath)
+    return TwitchEmotesvKEKL_animation_metadata[imagepath]
 end
 
-function TwitchEmotes_GetCurrentFrameNum(animdata)
-    return math.floor((TWITCHEMOTES_T * animdata.framerate) % animdata.nFrames);
+function TwitchEmotesvKEKL_GetCurrentFrameNum(animdata)
+    return math.floor((TWITCHEMOTESVKEKL_T * animdata.framerate) % animdata.nFrames);
 end
 
-function TwitchEmotes_GetTexCoordsForFrame(animdata, framenum)
+function TwitchEmotesvKEKL_GetTexCoordsForFrame(animdata, framenum)
     local fHeight = animdata.frameHeight;
     return 0, 1 ,framenum * fHeight / animdata.imageHeight, ((framenum * fHeight) + fHeight) / animdata.imageHeight
 end
 
-function TwitchEmotes_BuildEmoteFrameString(imagepath, animdata, framenum)
+function TwitchEmotesvKEKL_BuildEmoteFrameString(imagepath, animdata, framenum)
     local top = framenum * animdata.frameHeight;
     local bottom = top + animdata.frameHeight;
 
@@ -146,7 +146,7 @@ function TwitchEmotes_BuildEmoteFrameString(imagepath, animdata, framenum)
     return emoteStr
 end
 
-function TwitchEmotes_BuildEmoteFrameStringWithDimensions(imagepath, animdata,
+function TwitchEmotesvKEKL_BuildEmoteFrameStringWithDimensions(imagepath, animdata,
                                                         framenum, framewidth,
                                                         frameheight)
     local top = framenum * animdata.frameHeight;
