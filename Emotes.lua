@@ -789,6 +789,10 @@ TwitchEmotes_defaultpack = {
     ["jewdai"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\jewdai.tga:28:28",
     ["YodaSip"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\YodaSip.tga:28:28",
     ["billyReady"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\billyReady.tga:28:28",
+    [":soy:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\soy.tga:28:28",
+    ["ICANT"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\ICANT.tga:28:28",
+    ["megaflushed"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\megaflushed.tga:28:28",
+    ["worryLove"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\worryLove.tga:28:28",
     -- DansGaming -- Outdated
     ["dan7"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\DansGaming\\dan7.tga:28:28",
     ["dan10"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\DansGaming\\dan10.tga:28:28",
@@ -992,6 +996,9 @@ TwitchEmotes_defaultpack = {
     [":hot_face:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Emoji\\emHotface.tga:28:28",
     [":sunglasses:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Emoji\\emSunglasses.tga:28:28",
     [":x:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Emoji\\emX.tga:28:28",
+    [":skull:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Emoji\\emSkull.tga:28:28",
+    [":heart_eyes:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Emoji\\emHeart_eyes.tga:28:28",
+    [":warning:"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Emoji\\emWarning.tga:28:28",
     -- FinalBossTV
     ["finalBAYCHA"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\FinalBossTV\\finalBAYCHA.tga:28:28",
     ["finalCLAP"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\FinalBossTV\\finalCLAP.tga:28:28",
@@ -2278,6 +2285,8 @@ TwitchEmotes_defaultpack = {
     ["Seedge"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Pepes\\Seedge.tga:28:28",
     ["PepeStressed"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Pepes\\PepeStressed.tga:28:28",
     ["peepoPanda"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Pepes\\peepoPanda.tga:28:28",
+    ["Fatge"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Pepes\\Fatge.tga:28:28",
+    ["Readge"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Pepes\\Readge.tga:28:28",
     -- PsheroTV
     ["heroBT"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\PsheroTV\\heroBT.tga:28:28",
     ["heroFEELS"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\PsheroTV\\heroFEELS.tga:28:28",
@@ -3557,6 +3566,7 @@ TwitchEmotes_animation_metadata = {
     ["Interface\\AddOns\\TwitchEmotes\\Emotes\\BTTV+FFZ\\pokiBASS.tga"] = {["nFrames"] = 8, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 30},
     ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\YodaSip.tga"] = {["nFrames"] = 22, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 10},
     ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\billyReady.tga"] = {["nFrames"] = 18, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
+    ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\soy.tga"] = {["nFrames"] = 4, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=128, ["framerate"] = 14},
 }
 
 TwitchEmotes_emoticons = {
@@ -4380,6 +4390,10 @@ TwitchEmotes_emoticons = {
     ["YodaSip"] = "YodaSip",
     ["unholysip"] = "YodaSip",
     ["billyReady"] = "billyReady",
+    [":soy:"] = ":soy:",
+    ["ICANT"] = "ICANT",
+    ["megaflushed"] = "megaflushed",
+    ["worryLove"] = "worryLove",
     -- DansGaming
     ["dan7"] = "dan7",
     ["dan10"] = "dan10",
@@ -4595,6 +4609,9 @@ TwitchEmotes_emoticons = {
     [":sunglasses:"] = ":sunglasses:",
     [":x:"] = ":x:",
     [":X:"] = ":x:",
+    [":skull:"] = ":skull:",
+    [":heart_eyes:"] = ":heart_eyes:",
+    [":warning:"] = ":warning:",
     -- FinalBossTV
     ["finalBAYCHA"] = "finalBAYCHA",
     ["finalCLAP"] = "finalCLAP",
@@ -5987,6 +6004,8 @@ TwitchEmotes_emoticons = {
     ["Seedge"] = "Seedge",
     ["PepeStressed"] = "PepeStressed",
     ["peepoPanda"] = "peepoPanda",
+    ["Fatge"] = "Fatge",
+    ["Readge"] = "Readge",
     -- PsheroTV
     ["heroBT"] = "heroBT",
     ["heroFEELS"] = "heroFEELS",

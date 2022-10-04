@@ -5,14 +5,14 @@
   <!-- Copied from OptionSliderTemplate 2.4.3 because Blizzard is ......
 Check to see if they use consistent fontsizes in build > 8982 and remove this template.
 Revert PowaBarSliderTemplate to inherit from OptionsSliderTemplate if it's fixed as well.  -->
-  <Slider name="OptionsSmallSliderTemplate" orientation="HORIZONTAL" virtual="true" enableMouse="true">
+  <Slider name="OptionsSmallSliderTemplate" orientation="HORIZONTAL" virtual="true" inherits="BackdropTemplate" enableMouse="true">
     <Size>
       <AbsDimension x="144" y="17"/>
     </Size>
     <HitRectInsets>
       <AbsInset left="0" right="0" top="-10" bottom="-10"/>
     </HitRectInsets>
-    <Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
+    <!-- <Backdrop bgFile="Interface\Buttons\UI-SliderBar-Background" edgeFile="Interface\Buttons\UI-SliderBar-Border" tile="true">
       <EdgeSize>
         <AbsValue val="8"/>
       </EdgeSize>
@@ -22,7 +22,7 @@ Revert PowaBarSliderTemplate to inherit from OptionsSliderTemplate if it's fixed
       <BackgroundInsets>
         <AbsInset left="3" right="3" top="6" bottom="6"/>
       </BackgroundInsets>
-    </Backdrop>
+    </Backdrop> -->
     <Layers>
       <Layer level="ARTWORK">
         <FontString name="$parentText" inherits="GameFontNormalSmall">
@@ -66,7 +66,7 @@ Revert PowaBarSliderTemplate to inherit from OptionsSliderTemplate if it's fixed
     </Scripts>
   </Slider>
 
-  <Frame name="EmoticonsOptionsControlsPanel" hidden="false" parent="InterfaceOptionsFramePanelContainer">
+  <Frame name="EmoticonsOptionsControlsPanel" hidden="false"> <!-- parent="InterfaceOptionsFramePanelContainer">-->
     <Layers>
       <Layer level="ARTWORK">
         <FontString name="$parentTitle" text="Twitch Chat Emotes config" inherits="GameFontNormalLarge" justifyh="LEFT" justifyv="TOP">
@@ -99,6 +99,7 @@ Revert PowaBarSliderTemplate to inherit from OptionsSliderTemplate if it's fixed
     </Layers>
     <Scripts>
       <OnLoad>
+        if SettingsPanel then self:SetParent(SettingsPanel); else self:SetParent(InterfaceOptionsFramePanelContainer) end;
         self.name = "TwitchEmotes";
         InterfaceOptions_AddCategory(self);
         
