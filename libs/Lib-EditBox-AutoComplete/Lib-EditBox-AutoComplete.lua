@@ -328,26 +328,31 @@ function EditBoxAutoComplete_Update(parent, text, cursorPosition)
             local baseSortingFN = function(match, text)
                 local matchingChars = 0;
                 local cleanmatch = match;
+                local cleantext = text;
                 if(parent.settings.activationChar ~= '' or parent.settings.closingChar ~= '') then
                     cleanmatch = match:gsub("[" ..
                                             parent.settings.activationChar ..
                                             parent.settings.closingChar ..
                                             "]", "")
+                    cleantext = text:gsub("[" ..
+                        parent.settings.activationChar ..
+                        parent.settings.closingChar ..
+                    "]", "")
                 end
                 
                 local index, _, _ =
-                    string.find(cleanmatch:lower(), text:lower())
+                    string.find(cleanmatch:lower(), cleantext:lower())
 
                 -- Check how many characters actually match (case sensitive)
-                for i = index, index + #text do
-                    if (string.sub(text, i - (index - 1), i - (index - 1)) ==
+                for i = index, index + #cleantext do
+                    if (string.sub(cleantext, i - (index - 1), i - (index - 1)) ==
                         string.sub(cleanmatch, i, i)) then
                         matchingChars = matchingChars + 1;
                     end
                 end
 
-                return (25 * (1 - (matchingChars / #text))) + (50 * index) +
-                           (25 * (1 - (#text / #cleanmatch)))
+                return (25 * (1 - (matchingChars / #cleantext))) + (50 * index) +
+                           (25 * (1 - (#cleantext / #cleanmatch)))
             end
 
             if parent.settings.suggestionBiasFN ~= nil then

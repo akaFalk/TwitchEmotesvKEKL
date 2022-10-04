@@ -792,6 +792,10 @@ TwitchEmotesvKEKL_defaultpack = {
     ["jewdai"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\jewdai.tga:28:28",
     ["YodaSip"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\YodaSip.tga:28:28",
     ["billyReady"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\billyReady.tga:28:28",
+    [":soy:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\soy.tga:28:28",
+    ["ICANT"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\ICANT.tga:28:28",
+    ["megaflushed"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\megaflushed.tga:28:28",
+    ["worryLove"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\worryLove.tga:28:28",
     -- DansGaming -- Outdated
     ["dan7"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\DansGaming\\dan7.tga:28:28",
     ["dan10"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\DansGaming\\dan10.tga:28:28",
@@ -995,6 +999,9 @@ TwitchEmotesvKEKL_defaultpack = {
     [":hot_face:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emHotface.tga:28:28",
     [":sunglasses:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emSunglasses.tga:28:28",
     [":x:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emX.tga:28:28",
+    [":skull:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emSkull.tga:28:28",
+    [":heart_eyes:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emHeart_eyes.tga:28:28",
+    [":warning:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emWarning.tga:28:28",
     -- FinalBossTV
     ["finalBAYCHA"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\FinalBossTV\\finalBAYCHA.tga:28:28",
     ["finalCLAP"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\FinalBossTV\\finalCLAP.tga:28:28",
@@ -2281,6 +2288,8 @@ TwitchEmotesvKEKL_defaultpack = {
     ["Seedge"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Seedge.tga:28:28",
     ["PepeStressed"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeStressed.tga:28:28",
     ["peepoPanda"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoPanda.tga:28:28",
+    ["Fatge"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Fatge.tga:28:28",
+    ["Readge"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Readge.tga:28:28",
     -- PsheroTV
     ["heroBT"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\PsheroTV\\heroBT.tga:28:28",
     ["heroFEELS"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\PsheroTV\\heroFEELS.tga:28:28",
@@ -3560,6 +3569,7 @@ TwitchEmotesvKEKL_animation_metadata = {
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\BTTV+FFZ\\pokiBASS.tga"] = {["nFrames"] = 8, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 30},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\YodaSip.tga"] = {["nFrames"] = 22, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 10},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\billyReady.tga"] = {["nFrames"] = 18, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\soy.tga"] = {["nFrames"] = 4, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=128, ["framerate"] = 14},
 }
 
 TwitchEmotesvKEKL_emoticons = {
@@ -4386,6 +4396,10 @@ TwitchEmotesvKEKL_emoticons = {
     ["YodaSip"] = "YodaSip",
     ["unholysip"] = "YodaSip",
     ["billyReady"] = "billyReady",
+    [":soy:"] = ":soy:",
+    ["ICANT"] = "ICANT",
+    ["megaflushed"] = "megaflushed",
+    ["worryLove"] = "worryLove",
     -- DansGaming
     ["dan7"] = "dan7",
     ["dan10"] = "dan10",
@@ -4601,6 +4615,9 @@ TwitchEmotesvKEKL_emoticons = {
     [":sunglasses:"] = ":sunglasses:",
     [":x:"] = ":x:",
     [":X:"] = ":x:",
+    [":skull:"] = ":skull:",
+    [":heart_eyes:"] = ":heart_eyes:",
+    [":warning:"] = ":warning:",
     -- FinalBossTV
     ["finalBAYCHA"] = "finalBAYCHA",
     ["finalCLAP"] = "finalCLAP",
@@ -5993,6 +6010,8 @@ TwitchEmotesvKEKL_emoticons = {
     ["Seedge"] = "Seedge",
     ["PepeStressed"] = "PepeStressed",
     ["peepoPanda"] = "peepoPanda",
+    ["Fatge"] = "Fatge",
+    ["Readge"] = "Readge",
     -- PsheroTV
     ["heroBT"] = "heroBT",
     ["heroFEELS"] = "heroFEELS",

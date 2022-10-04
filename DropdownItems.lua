@@ -87,7 +87,7 @@ TwitchEmotesvKEKL_dropdown_options = {
         "Custom 6", "PepeLaffe", "coffeeS", "peepoEZSip", "PepeGiggle",
         "PepeKingLove", "PepeSpartan", "PepeSuspect", "peepoChef",
         "peepoChrist", "peepoSuze", "PepeCop", "potter", "PepeStudy",
-        "suze4animals", "PepeGod", "PepeWave", "PepeHacker", "PepeWheels",
+        "suze4animals", "PepeGod", "PepeWave", "HACKERMANS", "PepeWheels",
         "peepOK", "peepKing", "PepeSoldier", "FeelsDankMan", "spit1", "spit2",
         "suze4know", "GAmer", "PepeSmurf", "PauseChamp", "PogChampius",
         "WeirdChampius", "PogO", "PogOW"
@@ -124,7 +124,7 @@ TwitchEmotesvKEKL_dropdown_options = {
         "drxSmart", "drxSmile", "drxSpace", "drxWink"
     },
     [15] = { -- 45
-        "Emojis", ":poop:", ":blush:", ":flush:", ":door:", ":question:",
+        "Emojis", ":poop:", ":blush:", ":flushed:", ":door:", ":question:",
         ":gun:", ":hand:", ":pray:", ":joy:", ":cry:", ":sob:", ":yum:",
         ":rolling_eyes:", ":smiley:", ":wink:", ":smirk:", ":tired:", ":weary:",
         ":thinking:", ":muscle:", ":ok_hand:", ":point_right:", ":point_left:",
