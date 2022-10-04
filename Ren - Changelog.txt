@@ -2842,6 +2842,22 @@ jewdai
 peepoPanda
 PepeStressed
 
+
+----
+Twitch Emotes V2.55
+----
+:skull:
+:heart_eyes:
+:warning:
+:megaflushed:
+ICANT
+Wowee
+Fatge
+Readge
+:soy:
+Resolved issue with dropdown lua error if double colons used
+
+
 ----
 To do
 ----
