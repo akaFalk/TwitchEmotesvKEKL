@@ -2844,19 +2844,104 @@ PepeStressed
 
 
 ----
-Twitch Emotes V2.55
+Twitch Emotes V2.56
 ----
 :skull:
 :heart_eyes:
 :warning:
 :megaflushed:
 ICANT
-Wowee
 Fatge
 Readge
 :soy:
 Resolved issue with dropdown lua error if double colons used
 
+
+----
+Twitch Emotes V2.56 - Halloween update
+----
+Added over 70+ Halloween emotes back:
+
+gachiGASM
+HandsUp
+LULW
+OMEGALUL
+PagMan
+PauseChamp
+ZULUL
+
+:aware:
+AYAYA
+:clueless:
+Sussy
+HUH
+
+4Weird
+5Head
+KEKW
+KEKWeird
+KKonaW
+MaN
+Pog
+PogO
+PogU
+SillyChamp
+WeirdChamp
+
+Bedge
+binocs
+BOOBA
+COPIUM
+EZ
+FeelsBadMan
+FeelsGoodMan
+FeelsOkayMan
+FeelsOldMan
+FeelsStrongMan
+FeelsTired
+FeelsWeirdMan
+HYPERS
+Madge
+Madgee
+monkaH
+monkaHmm
+monkaLaugh
+monkaSusp
+monkaT
+monkaW
+NODDERS
+NOP
+NOPERS
+Okayeg
+Okayge
+OkaygeShrug
+PAUSERS
+peepoFat
+peepoGiggles
+peepoHappy
+peepoLove
+peepoSad
+peepoWeird
+peepoWTF
+Pepega
+PepeHands
+PepeLaugh
+PepePains
+PepePhone
+PepePhoned
+PepeWave
+PepoThink
+POGGERS
+Prayge
+Sadge
+:shy:
+Stronge
+Susge
+WICKED
+YEP
+
+4Head
+:tf:
 
 ----
 To do

@@ -793,6 +793,7 @@ TwitchEmotes_defaultpack = {
     ["ICANT"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\ICANT.tga:28:28",
     ["megaflushed"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\megaflushed.tga:28:28",
     ["worryLove"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\worryLove.tga:28:28",
+    ["Sussy"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\Sussy.tga:28:28",
     -- DansGaming -- Outdated
     ["dan7"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\DansGaming\\dan7.tga:28:28",
     ["dan10"] = "Interface\\AddOns\\TwitchEmotes\\Emotes\\DansGaming\\dan10.tga:28:28",
@@ -3567,6 +3568,7 @@ TwitchEmotes_animation_metadata = {
     ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\YodaSip.tga"] = {["nFrames"] = 22, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 10},
     ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\billyReady.tga"] = {["nFrames"] = 18, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
     ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\soy.tga"] = {["nFrames"] = 4, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=128, ["framerate"] = 14},
+    ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Custom\\Sussy.tga"] = {["nFrames"] = 6, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 20},
 }
 
 TwitchEmotes_emoticons = {
@@ -4394,6 +4396,7 @@ TwitchEmotes_emoticons = {
     ["ICANT"] = "ICANT",
     ["megaflushed"] = "megaflushed",
     ["worryLove"] = "worryLove",
+    ["Sussy"] = "Sussy",
     -- DansGaming
     ["dan7"] = "dan7",
     ["dan10"] = "dan10",
