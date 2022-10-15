@@ -3572,6 +3572,7 @@ TwitchEmotesvKEKL_animation_metadata = {
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\billyReady.tga"] = {["nFrames"] = 18, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\soy.tga"] = {["nFrames"] = 4, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=128, ["framerate"] = 14},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\Sussy.tga"] = {["nFrames"] = 6, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 20},
+}
 
 TwitchEmotesvKEKL_emoticons = {
     -- AdmiralBulldog
