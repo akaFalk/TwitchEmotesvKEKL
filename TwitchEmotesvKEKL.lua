@@ -535,7 +535,7 @@ function Emoticons_OptionsWindow_OnShow(self)
                                          "favCheckButton_" .. c[1],
                                          favframe_GlobalName,
                                          "ChatConfigCheckButtonTemplate");
-            favCheckButton:SetParent("favCheckButton_" .. anchor);
+            favCheckButton:SetParent(getglobal("favCheckButton_" .. anchor));
             if ((itemcnt % 10) ~= 0) then
                 favCheckButton:SetPoint("TOPLEFT", 0, -16);
             else
