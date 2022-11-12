@@ -48,9 +48,9 @@ TwitchEmotes_dropdown_options = {
         "cptfriHE", "Del", "ednasly", "endBomb", "ThisIsFine",
         "pokiW", "AMAZIN", "AMAZINGA"
     },
-    [06] = { -- 33
+    [06] = { -- 31
         "Custom 2", "ANEBruh", "endDawg", "endFrench", "endHarambe", "endKyori",
-        "endNotLikeThis", "HappyMerchant", "HyperAngryMerchant", "endRP",
+        "endNotLikeThis", "endRP",
         "endTrump", "FlipThis", "fruitBug", "HYPEROMEGALUL", ":praise:",
         "marcithMath", "monkeyS", "oldmorDim", "PogCena", "OkayChomp",
         "HmmChamp", "5Champ", "SuicideThinking", "BOGGED", "Stonks", ":KEK:",
