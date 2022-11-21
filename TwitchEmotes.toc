@@ -1,4 +1,4 @@
-## Interface: 100000
+## Interface: 100002
 ## Title: |TInterface\Addons\TwitchEmotes\Emotes\Pepes\EZ:0|tTwitch Emotes|TInterface\Addons\TwitchEmotes\Emotes\Pepes\EZ:0|t
 ## Author: Ren - Illidan (US) & Jons - MirageRaceway (EU)
 ## Notes: Adds popular Twitch & Discord emotes to your chat. Developed by Ren - Illidan (US) & Jons - Golemagg (EU)
