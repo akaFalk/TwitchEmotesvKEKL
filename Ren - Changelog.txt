@@ -2600,7 +2600,6 @@ renamed PepeLaughPoint to PepePoint
 renamed PepeOld to FeelsOldMan
 peepoNotes
 Awakge
-monkaSteer
 Nerdge
 :shy:
 peepoSmash
@@ -2624,7 +2623,6 @@ Madge
 modCheck1
 modCheck2
 monakS
-monkaSteer
 monkaStop
 Nerdge
 Okayge
@@ -2942,6 +2940,34 @@ YEP
 
 4Head
 :tf:
+
+
+----
+Twitch Emotes V2.57
+----
+Final update until January - later ones will be Christmas
+
+Removed: Halondrus & Seedge - xpac over lads
+
+Added:
+
+peepoChop
+monkaSTEER
+ppHop
+FeelsWeakMan
+PepegaCredit
+
+worryFat
+WrathChest
+MoneySniff
+GAMING
+
+Pokelawl emotes
+
+:coffee:
+
+PepeNOOO
+PepeOuuuhh
 
 ----
 To do
