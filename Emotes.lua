@@ -2268,7 +2268,6 @@ TwitchEmotesvKEKL_defaultpack = {
     ["peepoJail"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoJail.tga:28:28",
     ["peepoNotes"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoNotes.tga:28:28",
     ["Awakge"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Awakge.tga:28:28",
-    ["monkaSteer"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\monkaSteer.tga:28:28",
     ["Nerdge"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Nerdge.tga:28:28",
     [":shy:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\shy.tga:28:28",
     ["peepoSmash"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoSmash.tga:28:28",
