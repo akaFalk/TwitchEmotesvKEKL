@@ -408,6 +408,7 @@ TwitchEmotesvKEKL_defaultpack = {
     ["pokiBASS"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\BTTV+FFZ\\pokiBASS.tga:28:28",
     ["PotFriend"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\BTTV+FFZ\\PotFriend.tga:28:28",
     ["NotLike"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\BTTV+FFZ\\NotLike.tga:28:28",
+    ["LULE"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\BTTV+FFZ\\LULE.tga:28:28",
     -- C9Sneaky
     ["sneakyBoost"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\C9Sneaky\\sneakyBoost.tga:28:28",
     ["sneakyBug"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\C9Sneaky\\sneakyBug.tga:28:28",
@@ -803,6 +804,8 @@ TwitchEmotesvKEKL_defaultpack = {
     ["WrathChest"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\WrathChest.tga:28:28",
     ["MoneySniff"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\MoneySniff.tga:28:28",
     ["GAMING"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\GAMING.tga:28:28",
+    ["RAGEY"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\RAGEY.tga:28:28",
+    ["hehecat"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\hehecat.tga:28:28",
     -- DansGaming -- Outdated
     ["dan7"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\DansGaming\\dan7.tga:28:28",
     ["dan10"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\DansGaming\\dan10.tga:28:28",
@@ -1011,6 +1014,7 @@ TwitchEmotesvKEKL_defaultpack = {
     [":warning:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emWarning.tga:28:28",
     [":coffee:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emCoffee.tga:28:28",
     [":full_moon_with_face:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emMoonface.tga:28:28",
+    [":eyes_sus:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emEyesSus.tga:28:28",
     -- FinalBossTV
     ["finalBAYCHA"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\FinalBossTV\\finalBAYCHA.tga:28:28",
     ["finalCLAP"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\FinalBossTV\\finalCLAP.tga:28:28",
@@ -1968,7 +1972,7 @@ TwitchEmotesvKEKL_defaultpack = {
     ["PepeMStacheW"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeMStache.tga:LARGE",
     ["PeepKek"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PeepKek.tga:28:28",
     ["PeepGiggle"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PeepGiggle.tga:28:28",
-    ["PepePains"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Pepepains.tga:28:28",
+    ["PepePains"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepePains.tga:28:28",
     ["peepoPants"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoPants.tga:28:28",
     ["FeelsOakyMan"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\FeelsOakyMan.tga:28:28",
     ["FeelsWiredMan"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\FeelsWiredMan.tga:28:28",
@@ -2171,7 +2175,7 @@ TwitchEmotesvKEKL_defaultpack = {
     ["monkaJail"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\monkaJail.tga:28:28",
     ["FeelsNewYear"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\FeelsNewYear.tga:28:28",
     ["PepeLove"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeLove.tga:28:28",
-    ["peepoWoW"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoWoW.tga:28:28",
+    ["peepoWow"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoWow.tga:28:28",
     ["peepoJammies"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\peepoJammies.tga:28:28",
     ["pillowJammies"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\pillowJammies.tga:28:28",
     ["memebeam1"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\memebeam1.tga:28:28",
@@ -2329,6 +2333,7 @@ TwitchEmotesvKEKL_defaultpack = {
     ["PepeNOOO"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeNOOO.tga:28:28",
     ["PepeOuuuhh"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeOuuuhh.tga:28:28",
     ["PepeSith"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeSith.tga:28:28",
+    ["Suske"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\Suske.tga:28:28",
     -- PsheroTV
     ["heroBT"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\PsheroTV\\heroBT.tga:28:28",
     ["heroFEELS"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\PsheroTV\\heroFEELS.tga:28:28",
@@ -3618,7 +3623,9 @@ TwitchEmotesvKEKL_animation_metadata = {
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\MoneySniff.tga"] = {["nFrames"] = 25, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\GAMING.tga"] = {["nFrames"] = 20, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeNOOO.tga"] = {["nFrames"] = 7, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 20},
-    ["Interface\\AddOns\\TwitchEmotes\\Emotes\\Pepes\\PepeSith.tga"] = {["nFrames"] = 12, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=512, ["framerate"] = 10},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeSith.tga"] = {["nFrames"] = 12, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=512, ["framerate"] = 10},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\POGGIES.tga"] = {["nFrames"] = 8, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 12},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\RAGEY.tga"] = {["nFrames"] = 31, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 10},
 }
 
 TwitchEmotesvKEKL_emoticons = {
@@ -3983,7 +3990,6 @@ TwitchEmotesvKEKL_emoticons = {
     ["bobrossTree"] = "bobrossTree",
     ["bobrossVHS"] = "bobrossVHS",
     -- BTTV+FFZ
-    ["emDface"] = "D:",
     ["D:"] = "D:",
     ["4HEad"] = "4HEad",
     ["BBona"] = "BBona",
@@ -4037,6 +4043,7 @@ TwitchEmotesvKEKL_emoticons = {
     ["PowerUpR"] = "PowerUpR",
     ["PotFriend"] = "PotFriend",
     ["NotLike"] = "NotLike",
+    ["LULE"] = "LULE",
     -- C9Sneaky
     ["sneakyBoost"] = "sneakyBoost",
     ["sneakyBug"] = "sneakyBug",
@@ -4454,6 +4461,8 @@ TwitchEmotesvKEKL_emoticons = {
     ["WrathChest"] = "WrathChest",
     ["MoneySniff"] = "MoneySniff",
     ["GAMING"] = "GAMING",
+    ["RAGEY"] = "RAGEY",
+    ["hehecat"] = "hehecat",
     -- DansGaming
     ["dan7"] = "dan7",
     ["dan10"] = "dan10",
@@ -4674,6 +4683,7 @@ TwitchEmotesvKEKL_emoticons = {
     [":warning:"] = ":warning:",
     [":coffee:"] = ":coffee:",
     [":full_moon_with_face:"] = ":full_moon_with_face:",
+    [":eyes_sus:"] = ":eyes_sus:",
     -- FinalBossTV
     ["finalBAYCHA"] = "finalBAYCHA",
     ["finalCLAP"] = "finalCLAP",
@@ -5636,7 +5646,6 @@ TwitchEmotesvKEKL_emoticons = {
     ["PeepKek"] = "PeepKek",
     ["PeepGiggle"] = "PeepGiggle",
     ["PepePains"] = "PepePains",
-    ["Pepepains"] = "PepePains",
     ["peepoPants"] = "peepoPants",
     ["FeelsOakyMan"] = "FeelsOakyMan",
     ["FeelsWiredMan"] = "FeelsWiredMan",
@@ -5913,7 +5922,7 @@ TwitchEmotesvKEKL_emoticons = {
     ["pepoS"] = "pepoS",
     ["pepoGun"] = "pepoGun",
     ["PepeLove"] = "PepeLove",
-    ["peepoWoW"] = "peepoWoW",
+    ["peepoWow"] = "peepoWow",
     ["peepoJammies"] = "peepoJammies",
     ["peepojammies"] = "peepoJammies",
     ["pepeblyat"] = "PepeBlyat",
@@ -6059,6 +6068,7 @@ TwitchEmotesvKEKL_emoticons = {
     ["ClownHypers"] = "ClownHypers",
     ["monkaInsane"] = "monkaInsane",
     ["WICKEDSTEER"] = "WICKEDSTEER",
+    ["Lifevsdragon"] = "WICKEDSTEER",
     ["monkaShoot"] = "monkaShoot",
     ["pepeW"] = "pepeW",
     ["HabibiPrayge"] = "HabibiPrayge",
@@ -6098,6 +6108,7 @@ TwitchEmotesvKEKL_emoticons = {
     ["PepeNOOO"] = "PepeNOOO",
     ["PepeOuuuhh"] = "PepeOuuuhh",
     ["PepeSith"] = "PepeSith",
+    ["Suske"] = "Suske",
     -- PsheroTV
     ["heroBT"] = "heroBT",
     ["heroFEELS"] = "heroFEELS",
