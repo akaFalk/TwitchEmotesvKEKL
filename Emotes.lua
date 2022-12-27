@@ -806,6 +806,9 @@ TwitchEmotesvKEKL_defaultpack = {
     ["GAMING"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\GAMING.tga:28:28",
     ["RAGEY"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\RAGEY.tga:28:28",
     ["hehecat"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\hehecat.tga:28:28",
+    ["TeaTime"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\TeaTime.tga:28:28",
+    ["WM"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\WM.tga:28:28",
+    ["noted"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\noted.tga:28:28",
     -- DansGaming -- Outdated
     ["dan7"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\DansGaming\\dan7.tga:28:28",
     ["dan10"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\DansGaming\\dan10.tga:28:28",
@@ -1015,6 +1018,7 @@ TwitchEmotesvKEKL_defaultpack = {
     [":coffee:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emCoffee.tga:28:28",
     [":full_moon_with_face:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emMoonface.tga:28:28",
     [":eyes_sus:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emEyesSus.tga:28:28",
+    [":fire:"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Emoji\\emFire.tga:28:28",
     -- FinalBossTV
     ["finalBAYCHA"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\FinalBossTV\\finalBAYCHA.tga:28:28",
     ["finalCLAP"] = "Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\FinalBossTV\\finalCLAP.tga:28:28",
@@ -3626,6 +3630,9 @@ TwitchEmotesvKEKL_animation_metadata = {
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\PepeSith.tga"] = {["nFrames"] = 12, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=512, ["framerate"] = 10},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Pepes\\POGGIES.tga"] = {["nFrames"] = 8, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=256, ["framerate"] = 12},
     ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\RAGEY.tga"] = {["nFrames"] = 31, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 10},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\TeaTime.tga"] = {["nFrames"] = 31, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 10},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\GuildEmotes\\PogTasty.tga"] = {["nFrames"] = 31, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 13},
+    ["Interface\\AddOns\\TwitchEmotesvKEKL\\Emotes\\Custom\\noted.tga"] = {["nFrames"] = 30, ["frameWidth"] = 32, ["frameHeight"] = 32, ["imageWidth"]=32, ["imageHeight"]=1024, ["framerate"] = 15},
 }
 
 TwitchEmotesvKEKL_emoticons = {
@@ -4463,6 +4470,9 @@ TwitchEmotesvKEKL_emoticons = {
     ["GAMING"] = "GAMING",
     ["RAGEY"] = "RAGEY",
     ["hehecat"] = "hehecat",
+    ["TeaTime"] = "TeaTime",
+    ["WM"] = "WM",
+    ["noted"] = "noted",
     -- DansGaming
     ["dan7"] = "dan7",
     ["dan10"] = "dan10",
@@ -4684,6 +4694,7 @@ TwitchEmotesvKEKL_emoticons = {
     [":coffee:"] = ":coffee:",
     [":full_moon_with_face:"] = ":full_moon_with_face:",
     [":eyes_sus:"] = ":eyes_sus:",
+    [":fire:"] = ":fire:",
     -- FinalBossTV
     ["finalBAYCHA"] = "finalBAYCHA",
     ["finalCLAP"] = "finalCLAP",
@@ -5824,6 +5835,7 @@ TwitchEmotesvKEKL_emoticons = {
     ["COGGERS"] = "COGGERS",
     ["Coggers"] = "COGGERS",
     ["monkaStop"] = "monkaStop",
+    ["Monkastop"] = "monkaStop",
     ["FeelsLoveMan"] = "FeelsLoveMan",
     ["FeelsLove"] = "FeelsLoveMan",
     ["FeelsLoveManW"] = "FeelsLoveManW",
