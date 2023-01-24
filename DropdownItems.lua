@@ -209,7 +209,7 @@ TwitchEmotesvKEKL_dropdown_options = {
     },
     [24] = { -- 36
         "peepo 1", "peepoSalute", "peepoCute", "peepoLove", "peepoPride",
-        "peepoWoW", "peepoBlanket", "peepoSenor", "peepoStudy", "peepoHmm",
+        "peepoWow", "peepoBlanket", "peepoSenor", "peepoStudy", "peepoHmm",
         "peepoSmile", "peepoPoo", "peepoTired", "peepoSad", "peepoS",
         "peepoHug", "peepoHugged", "peepoAP", "peepoEZ", "peepoCool",
         "peepoBeer", "peepoFat", "peepoChonk", "peepoHit", "peepoFight",
